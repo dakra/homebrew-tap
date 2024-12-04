@@ -7,6 +7,13 @@ class Goimapnotify < Formula
 
   depends_on "go" => :build
 
+  service do
+    run [opt_bin/"goimapnotify"]
+    keep_alive true
+    log_path "/tmp/homebrew.goimapnotify.stdout.log"
+    error_log_path "/tmp/homebrew.goimapnotify.stderr.log"
+  end
+
   def install
     system "go", "build", *std_go_args
   end
