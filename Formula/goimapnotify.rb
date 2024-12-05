@@ -12,6 +12,10 @@ class Goimapnotify < Formula
     keep_alive true
     log_path "/tmp/homebrew.goimapnotify.stdout.log"
     error_log_path "/tmp/homebrew.goimapnotify.stderr.log"
+    working_dir ENV["HOME"]
+    run_type :immediate
+    process_type :background
+    environment_variables PATH: std_service_path_env
   end
 
   def install
