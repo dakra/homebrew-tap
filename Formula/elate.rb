@@ -3,8 +3,8 @@ class Elate < Formula
 
   desc "Emacs Lisp Automation Tool: spawn and drive sandboxed, observable Emacs sessions"
   homepage "https://github.com/dakra/elate"
-  url "https://files.pythonhosted.org/packages/20/69/ff2ceebfe3eac3061592a0deffd883f7aff3ffe311d3f6996a86b4849c17/elate-0.8.0.tar.gz"
-  sha256 "8ae3295d6d1061649aad7d69aa92d56b0e9592e2c2e48cb805e9645aaddfb58e"
+  url "https://files.pythonhosted.org/packages/1a/2d/e9866c8d642bd6864524dd7f13887e33eb5d7c30fca70f788df7096acbe5/elate-0.10.0.tar.gz"
+  sha256 "6fec368b039aec10117ad50800707133c157e15c3744f57e030f2b6f1b2a17ad"
   license "GPL-3.0-or-later"
 
   # Rust builds pydantic-core, rpds-py, and cryptography (all pulled in by mcp).
@@ -21,8 +21,8 @@ class Elate < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/19/14/2c5dd9f512b66549ae92767a9c7b330ae88e1932ca57876909410251fe13/anyio-4.13.0.tar.gz"
-    sha256 "334b70e641fd2221c1505b3890c69882fe4a2df910cba14d97019b90b24439dc"
+    url "https://files.pythonhosted.org/packages/1c/b5/001890774a9552aff22502b8da382593109ce0c95314abaebbb116567545/anyio-4.14.0.tar.gz"
+    sha256 "b47c1f9ccf73e67021df785332508f99379c68fa7d0684e8e3492cb1d4b23f89"
   end
 
   resource "attrs" do
@@ -31,8 +31,8 @@ class Elate < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/f3/ce/ee2ecad540810a79593028e88299baeae54d346cc7a0d94b6199988b89b1/certifi-2026.5.20.tar.gz"
-    sha256 "69dea482ab64caa7b9f6aba1c6bf48bb6a5448d1c0f1b17ab42ad8c763a5344d"
+    url "https://files.pythonhosted.org/packages/c9/c7/424b75da314c1045981bd9777432fad05a9e0c69daa4ed7e308bbaffe405/certifi-2026.6.17.tar.gz"
+    sha256 "024c88eeec92ca068db80f02b8b07c9cef7b9fe261d1d535abfd5abd6f6af432"
   end
 
   resource "cffi" do
@@ -86,8 +86,8 @@ class Elate < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/27/3c/347cf965d313f5d41764e7d46bea6ffe7d9ef13b983cc429b0340962a082/mcp-1.27.2.tar.gz"
-    sha256 "8e02db104096d1c25b28e64bde29a5c32b31bc241710213e12fd4d84985bdfef"
+    url "https://files.pythonhosted.org/packages/c1/ee/94c6c50ffc5b5cf4737052275d11b57367f32d1a8516e31dcd60591b3916/mcp-1.28.0.tar.gz"
+    sha256 "559d3f9943674cafbe5744c5d3794f3237e8b47f9bbc58e20c0fad680d8487c2"
   end
 
   resource "pycparser" do
@@ -212,6 +212,6 @@ class Elate < Formula
   end
 
   test do
-    assert_match "0.8.0", shell_output("#{bin}/elate --version")
+    assert_match "0.10.0", shell_output("#{bin}/elate --version")
   end
 end
