@@ -3,8 +3,8 @@ class Elate < Formula
 
   desc "Emacs Lisp Automation Tool: spawn and drive sandboxed, observable Emacs sessions"
   homepage "https://github.com/dakra/elate"
-  url "https://files.pythonhosted.org/packages/7f/39/6ee2afd448700b295d428a2f6b8b08ef994c836ab327741cd28c78343fc9/elate-0.11.0.tar.gz"
-  sha256 "70850c7eb37fb89be9fa6c28891cb682555f6a5732de0c2ddda8f13963161c90"
+  url "https://files.pythonhosted.org/packages/85/bf/bc8e6fa42c686ecafb65a86c30df7711c7ca334668b96d30eb741a23b0fb/elate-0.12.0.tar.gz"
+  sha256 "45983f592a1137f5cf2403d4dde2edfadfffafb9c9bfc6a56add2b6230dd17a7"
   license "GPL-3.0-or-later"
 
   # Rust builds pydantic-core, rpds-py, and cryptography (all pulled in by mcp).
