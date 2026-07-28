@@ -3,8 +3,8 @@ class Elate < Formula
 
   desc "Emacs Lisp Automation Tool: spawn and drive sandboxed, observable Emacs sessions"
   homepage "https://github.com/dakra/elate"
-  url "https://files.pythonhosted.org/packages/0a/20/b7640e291cc277485bd3e2a75dc053592dddf9c619d6867f025fc7a6b6d2/elate-0.13.0.tar.gz"
-  sha256 "8572d64d658afb9585d2ede56549d992aff8aa4c70d2e49e5ac4f82046f38a40"
+  url "https://files.pythonhosted.org/packages/74/6d/812964bda1c7f40bd998cf871f98d891a5e1dea75e91f34c6bc30a24ff69/elate-0.14.0.tar.gz"
+  sha256 "f63298d867404b3475796e44ff94baa15c4d0e172548a1d09b3dce9ff9a5b7b0"
   license "GPL-3.0-or-later"
 
   # Rust builds pydantic-core, rpds-py, and cryptography (all pulled in by mcp).
@@ -208,6 +208,10 @@ class Elate < Formula
       elate drives a real Emacs; install one if you have not already, e.g.:
         brew install --cask emacs        # GUI build
         brew install emacs-plus          # via d12frosted/emacs-plus
+
+      After upgrading, refresh any installed Agent Skill copies with:
+        elate update
+      (or rerun `elate install` where you installed them).
     EOS
   end
 
