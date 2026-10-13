@@ -192,7 +192,7 @@ class Elate < Formula
     # `--no-binary=:all:` does not force a (failing) source build. Stage each
     # resource so pip sees a cleanly named wheel (the cache path is prefixed
     # with a checksum that pip cannot parse).
-    python = Formula["python@3.13"].opt_bin/"python3.13"
+    python = formula_opt_bin("python@3.13")/"python3.13"
     PYOBJC.each do |name|
       resource(name).stage do
         system python, "-m", "pip", "--python=#{libexec}/bin/python", "install",
